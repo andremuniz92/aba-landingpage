@@ -1,27 +1,34 @@
 import React, { useState } from 'react';
 import './ServicesAccordion.css';
 
-const Servico: React.FC<any> = ({ titulo, descricao }) => {
-  const [aberto, setAberto] = useState(false);
+type ServicoItem = {
+  titulo: string;
+  descricao: string;
+};
 
+type ServicoProps = {
+  servico: ServicoItem;
+  aberto: boolean;
+  onClick: () => void;
+};
+
+
+const Servico: React.FC<ServicoProps> = ({ servico, aberto, onClick }) => {
   return (
     <div className="servico">
-      <div 
-        className="titulo-servico" 
-        onClick={() => setAberto(!aberto)}
-      >
-        <strong>{titulo}</strong>
+      <div className="titulo-servico" onClick={onClick}>
+        <strong>{servico.titulo}</strong>
         <span className="icone">{aberto ? '-' : '+'}</span>
       </div>
       <div className={`descricao-servico ${aberto ? 'aberto' : ''}`}>
-        <p>{descricao}</p>
+        <p>{servico.descricao}</p>
       </div>
     </div>
   );
 };
 
 export default function ListaServicos() {
-  const servicos = [
+  const servicos: ServicoItem[] = [
     {
       titulo: "Consultoria ESG e Estratégias Sustentáveis",
       descricao: `Desenvolvemos e implementamos estratégias ESG para empresas, 
@@ -55,8 +62,8 @@ export default function ListaServicos() {
         descricao: `Facilitamos o diálogo entre empresas, associações e órgãos públicos para impulsionar 
                         políticas climáticas e estratégias de sustentabilidade. Nossa atuação inclui a construção 
                         de parcerias estratégicas, participação em fóruns e consultas públicas. Por meio do advocacy, 
-                        trabalhamos para influenciar legislações, regulamentações e incentivos que viabilizem a t
-                        ransição para uma economia de baixo carbono, conectando o setor privado às oportunidades de 
+                        trabalhamos para influenciar legislações, regulamentações e incentivos que viabilizem a 
+                        transição para uma economia de baixo carbono, conectando o setor privado às oportunidades de 
                         impacto positivo no cenário político e regulatório.`
     },
     {
@@ -69,10 +76,19 @@ export default function ListaServicos() {
     }
   ];
 
+  const [indiceAberto, setIndiceAberto] = useState<number | null>(null);
+
   return (
     <div className="lista-servicos">
-      {servicos.map((s, idx) => (
-        <Servico key={idx} titulo={s.titulo} descricao={s.descricao} />
+      {servicos.map((servico, index) => (
+        <Servico
+          key={index}
+          servico={servico}
+          aberto={indiceAberto === index}
+          onClick={() =>
+            setIndiceAberto(indiceAberto === index ? null : index)
+          }
+        />
       ))}
     </div>
   );
