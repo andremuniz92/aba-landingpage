@@ -1,5 +1,5 @@
-import LogoHome from '../Logo/LogoHome';
-import LogoDiscription from '../LogoDiscription/LogoDiscription';
+// import LogoHome from '../Logo/LogoHome';
+// import LogoDiscription from '../LogoDiscription/LogoDiscription';
 import './HomePage.css'
 import logoHome from '../../../assets/logo-home.png'
 
