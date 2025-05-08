@@ -8,7 +8,7 @@ function About () {
                 <div className='about-text'>
                     <p className="tagline">Sobre nós</p>
                     <h1 className="title">
-                        A ABA Solutions                        
+                        A ABA Climate Solutions                        
                     </h1>
                     <p className="discription-about">
                         Com uma abordagem multidisciplinar e uma ampla rede de contatos nacionais e internacionais, oferecemos soluções personalizadas para associações, 

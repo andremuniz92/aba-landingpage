@@ -7,7 +7,7 @@
 }
 
 .item-list {
-    padding: 10px;
+    padding: 1rem;
     
 }
 
@@ -15,3 +15,11 @@ a {
     text-decoration: none;
     color: #1665FE;   
 }
+
+@media (max-width: 768px) {
+    .menu-list {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+    }
+  }

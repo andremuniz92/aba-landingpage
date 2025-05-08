@@ -1,0 +1,38 @@
+.lista-servicos {
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .servico {
+    border-bottom: 1px solid #ccc;
+    padding: 1em 0;
+  }
+  
+  .titulo-servico {
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    color: #141414;
+    font-weight: bold;
+  }
+  
+  .icone {
+    margin-left: 10px;
+    font-weight: bold;
+  }
+  
+  .descricao-servico {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.3s ease;
+    opacity: 0;
+  }
+  
+  .descricao-servico.aberto {
+    max-height: 1000px;
+    opacity: 1;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+  }
+  

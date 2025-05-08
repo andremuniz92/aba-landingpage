@@ -1,4 +1,9 @@
 .logoHome {
-    width: 640px;
-    height: 500px;
+    /* width: 640px;
+    height: 500px; */
+
+    flex: 1;
+  max-width: 600px;
+  width: 100%;
+  height: auto;
 }
