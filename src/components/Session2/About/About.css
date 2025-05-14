@@ -1,5 +1,6 @@
 .about {
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -68,10 +69,14 @@
   .about-content {
     flex-direction: column;
     text-align: center;
+    overflow-x: hidden; /* impede overflow horizontal */
+    padding: 0 1rem;     /* espaçamento interno lateral */
   }
 
   .about-text {
     align-items: center;
+    word-break: break-word;   /* quebra palavras muito longas */
+    max-width: 100%;
   }
 
   .about-image img {
