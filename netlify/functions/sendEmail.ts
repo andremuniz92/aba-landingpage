@@ -21,7 +21,7 @@ const handler: Handler = async (event: any) => {
     },
   });
 
-  transporter.verify((error, success) => {
+  transporter.verify((error) => {
     if (error) {
       console.log('Erro de conexão SMTP:', error);
     } else {
