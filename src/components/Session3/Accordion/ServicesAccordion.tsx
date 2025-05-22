@@ -68,11 +68,12 @@ export default function ListaServicos() {
     },
     {
         titulo: "Acesso Global a Iniciativas Climáticas",
-        descricao: `Oferecemos assessoria especializada para empresas e organizações que buscam se integrar ao 
-                        cenário global de sustentabilidade. Facilitamos a conexão com as principais iniciativas
-                        climáticas globais, como a Conferência das Partes (COP), permitindo que nossos clientes se 
-                        envolvam ativamente com políticas, financiamento e parcerias internacionais para impulsionar 
-                        seus projetos de impacto ambiental.`
+        descricao: `Oferecemos assessoria especializada para empresas e organizações que buscam 
+        se integrar ao cenário global de sustentabilidade. Facilitamos a conexão com as principais
+         iniciativas climáticas globais, como as Conferências das Partes (COP) das Nações Unidas
+          — nas áreas de mudança do clima, biodiversidade e combate à desertificação — permitindo que
+           nossos clientes se envolvam ativamente com políticas, financiamento e 
+           parcerias internacionais para impulsionar seus projetos de impacto ambiental.`
     }
   ];
 

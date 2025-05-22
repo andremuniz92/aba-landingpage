@@ -16,6 +16,9 @@ const Menu = () => {
                 <a href="#">Artigos</a>
             </li>
             <li>
+                <a href="#Fundadora">Fundadora</a>
+            </li>
+            <li>
                 <a href="#Contato">Contato</a>
             </li>
         </ul>       

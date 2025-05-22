@@ -21,7 +21,7 @@ const handler: Handler = async (event: any) => {
       name: 'ABA Solutions'
     },
     subject: `Contato via site do ABA Solutions (${email})`,
-    text: message,
+    text: `Mensagem via site do ABA Solutions pelo ${email}: ` + message,
   };
 
   try {

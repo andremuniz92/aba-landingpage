@@ -5,6 +5,7 @@ import About from './components/Session2/About/About'
 import Services from './components/Session3/ABAServices/Services'
 import Contact from './components/Session4/Contact/Contact'
 import Footer from './components/Session4/Footer/Footer'
+import Creator from './components/Session5/Creator/Creator'
 
 function App() {
 
@@ -21,6 +22,9 @@ function App() {
       </div>
       <div className='colorSessionWhite'>
         <Services/>
+      </div>
+      <div className='colorSessionWhite'>
+        <Creator/>
       </div>
       <div className='colorSessionBlue'>
         <Contact/>
