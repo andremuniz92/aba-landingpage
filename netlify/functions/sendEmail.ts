@@ -13,12 +13,20 @@ const handler: Handler = async (event: any) => {
 
   const transporter = nodemailer.createTransport({
     host: 'mail.abasolutions.com.br', // substitua pelo seu host real
-    port: 587, // ou 587
-    secure: false, // true para 465 (SSL), false para 587 (STARTTLS)
+    port: 465, // ou 587
+    secure: true, // true para 465 (SSL), false para 587 (STARTTLS)
     auth: {
       user: process.env.EMAIL_USER,
       pass: process.env.EMAIL_PASS,
     },
+  });
+
+  transporter.verify((error, success) => {
+    if (error) {
+      console.log('Erro de conexão SMTP:', error);
+    } else {
+      console.log('Conexão com SMTP estabelecida com sucesso!');
+    }
   });
 
   try {
