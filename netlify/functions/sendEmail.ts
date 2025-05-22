@@ -1,5 +1,5 @@
 import { Handler } from '@netlify/functions';
-import nodemailer from 'nodemailer';
+import sgMail from '@sendgrid/mail';
 
 const handler: Handler = async (event: any) => {
   const { email, message } = JSON.parse(event.body || '{}');
@@ -11,33 +11,26 @@ const handler: Handler = async (event: any) => {
     };
   }
 
-  const transporter = nodemailer.createTransport({
-    host: 'smtp.titan.email',
-    port: 465,
-    secure: true,
-    auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASS,
-    },
-  });
+  sgMail.setApiKey(process.env.SENDGRID_API_KEY as string);
+
+  const msg = {
+    to: process.env.TO_EMAIL as string,              // Para onde vai o email (ex: contato@abasolutions.com.br)
+    from: process.env.TO_EMAIL as string,            // De quem aparenta ser (use o mesmo no plano gratuito)
+    subject: `Contato via site do ABA Solutions (${email})`,
+    text: message,
+  };
 
   try {
-    await transporter.sendMail({
-      from: process.env.EMAIL_USER,
-      to: process.env.EMAIL_USER,
-      subject: `Contato via site do ABA Solutions do ${email}`,
-      text: message,
-    });
-
+    await sgMail.send(msg);
     return {
       statusCode: 200,
       body: JSON.stringify({ message: 'Email enviado com sucesso' }),
     };
-  } catch (error: any) {
-    console.error('Erro ao enviar email: ', error);
+  } catch (error) {
+    console.error('Erro ao enviar email:', error);
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: error.message || 'Erro ao enviar o email' }),
+      body: JSON.stringify({ error: 'Erro ao enviar o email' }),
     };
   }
 };
