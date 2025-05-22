@@ -16,7 +16,10 @@ const handler: Handler = async (event: any) => {
 
   const msg = {
     to: 'contato@abasolutions.com.br',              // Para onde vai o email (ex: contato@abasolutions.com.br)
-    from: 'contato@abasolutions.com.br',            // De quem aparenta ser (use o mesmo no plano gratuito)
+    from: {
+      email: 'contato@abasolutions.com.br',
+      name: 'ABA Solutions'
+    },
     subject: `Contato via site do ABA Solutions (${email})`,
     text: message,
   };
