@@ -93,10 +93,11 @@ button:hover {
   @media (max-width: 600px) {
     .contact-box {
       padding: 1.5rem;
+      width: auto;
     }
   
     input, textarea, button {
-      font-size: 0.95rem;
+      font-size: 0.8rem;
     }
   
     .contact-banner {

@@ -26,6 +26,7 @@
     flex-direction: column;
     gap: 1.5rem;
     max-width: 700px;
+    margin-left: 1rem;
   }
   
   .tagline {
@@ -42,7 +43,7 @@
   }
   
   .discription-creator {
-    font-size: 1rem;
+    font-size: 0.8rem;
     line-height: 1.6;
     color: black;
   }
@@ -66,11 +67,13 @@
   
   /* Responsivo */
   @media (max-width: 960px) {
+
     .creator-content {
       flex-direction: column;
       text-align: center;
       overflow-x: hidden; /* impede overflow horizontal */
       padding: 0 1rem;     /* espaçamento interno lateral */
+      height: 100vh;
     }
   
     .creator-text {
