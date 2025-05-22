@@ -1,5 +1,6 @@
 import { Handler } from '@netlify/functions';
 import sgMail from '@sendgrid/mail';
+import 'dotenv/config';
 
 const handler: Handler = async (event: any) => {
   const { email, message } = JSON.parse(event.body || '{}');
@@ -14,12 +15,12 @@ const handler: Handler = async (event: any) => {
   sgMail.setApiKey(process.env.SENDGRID_API_KEY as string);
 
   const msg = {
-    to: process.env.TO_EMAIL as string,              // Para onde vai o email (ex: contato@abasolutions.com.br)
-    from: process.env.TO_EMAIL as string,            // De quem aparenta ser (use o mesmo no plano gratuito)
+    to: process.env.EMAIL_USER as string,              // Para onde vai o email (ex: contato@abasolutions.com.br)
+    from: process.env.EMAIL_USER as string,            // De quem aparenta ser (use o mesmo no plano gratuito)
     subject: `Contato via site do ABA Solutions (${email})`,
     text: message,
   };
-
+  console.log(process.env.EMAIL_USER)
   try {
     await sgMail.send(msg);
     return {
