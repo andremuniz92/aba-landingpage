@@ -12,7 +12,9 @@ const handler: Handler = async (event: any) => {
   }
 
   const transporter = nodemailer.createTransport({
-    service: 'gmail',
+    host: 'mail.abasolutions.com.br', // substitua pelo seu host real
+    port: 587, // ou 587
+    secure: false, // true para 465 (SSL), false para 587 (STARTTLS)
     auth: {
       user: process.env.EMAIL_USER,
       pass: process.env.EMAIL_PASS,
