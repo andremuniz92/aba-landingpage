@@ -15,8 +15,8 @@ const handler: Handler = async (event: any) => {
   sgMail.setApiKey(process.env.SENDGRID_API_KEY as string);
 
   const msg = {
-    to: process.env.EMAIL_USER as string,              // Para onde vai o email (ex: contato@abasolutions.com.br)
-    from: process.env.EMAIL_USER as string,            // De quem aparenta ser (use o mesmo no plano gratuito)
+    to: 'contato@abasolutions.com.br',              // Para onde vai o email (ex: contato@abasolutions.com.br)
+    from: 'contato@abasolutions.com.br',            // De quem aparenta ser (use o mesmo no plano gratuito)
     subject: `Contato via site do ABA Solutions (${email})`,
     text: message,
   };
