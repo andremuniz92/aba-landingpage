@@ -5,15 +5,15 @@ import 'dotenv/config';
 const handler: Handler = async (event: any) => {
   const { email, message } = JSON.parse(event.body || '{}');
 
+  console.log('SENDGRID_API_KEY: ' + process.env.SENDGRID_API_KEY)
+  console.log('MENSAGEM: '+message)
+
   if (!email || !message) {
     return {
       statusCode: 400,
       body: JSON.stringify({ error: 'Email e mensagem são obrigatórios' }),
     };
   }
-
-  console.log('SENDGRID_API_KEY: ' + process.env.SENDGRID_API_KEY)
-  console.log(message)
 
   sgMail.setApiKey(process.env.SENDGRID_API_KEY as string);
 
