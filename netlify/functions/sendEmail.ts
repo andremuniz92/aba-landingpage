@@ -5,9 +5,6 @@ import 'dotenv/config';
 const handler: Handler = async (event: any) => {
   const { email, message } = JSON.parse(event.body || '{}');
 
-  console.log('SENDGRID_API_KEY: ' + process.env.SENDGRID_API_KEY)
-  console.log('MENSAGEM: '+message)
-
   if (!email || !message) {
     return {
       statusCode: 400,
@@ -19,11 +16,11 @@ const handler: Handler = async (event: any) => {
 
   const msg = {
     to: 'contato@abasolutions.com.br',              // Para onde vai o email (ex: contato@abasolutions.com.br)
-    from: email,            // De quem aparenta ser (use o mesmo no plano gratuito)
+    from: 'contato@abasolutions.com.br',            // De quem aparenta ser (use o mesmo no plano gratuito)
     subject: `Contato via site do ABA Solutions (${email})`,
     text: message,
   };
-  console.log(process.env.EMAIL_USER)
+
   try {
     await sgMail.send(msg);
     return {
