@@ -12,11 +12,14 @@ const handler: Handler = async (event: any) => {
     };
   }
 
+  console.log('SENDGRID_API_KEY: ' + process.env.SENDGRID_API_KEY)
+  console.log(message)
+
   sgMail.setApiKey(process.env.SENDGRID_API_KEY as string);
 
   const msg = {
     to: 'contato@abasolutions.com.br',              // Para onde vai o email (ex: contato@abasolutions.com.br)
-    from: 'contato@abasolutions.com.br',            // De quem aparenta ser (use o mesmo no plano gratuito)
+    from: email,            // De quem aparenta ser (use o mesmo no plano gratuito)
     subject: `Contato via site do ABA Solutions (${email})`,
     text: message,
   };
