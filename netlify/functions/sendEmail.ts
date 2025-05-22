@@ -21,14 +21,6 @@ const handler: Handler = async (event: any) => {
     },
   });
 
-  transporter.verify((error) => {
-    if (error) {
-      console.log('Erro de conexão SMTP:', error);
-    } else {
-      console.log('Conexão com SMTP estabelecida com sucesso!');
-    }
-  });
-
   try {
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
@@ -41,11 +33,11 @@ const handler: Handler = async (event: any) => {
       statusCode: 200,
       body: JSON.stringify({ message: 'Email enviado com sucesso' }),
     };
-  } catch (error) {
-    console.error(error);
+  } catch (error: any) {
+    console.error('Erro ao enviar email: ', error);
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: 'Erro ao enviar o email' }),
+      body: JSON.stringify({ error: error.message || 'Erro ao enviar o email' }),
     };
   }
 };
