@@ -1,27 +1,39 @@
 .contact-page { 
-  padding: 2rem;
+  /* padding: 2rem; */
   min-height: 100vh;
+  height: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
+}
+
+.contact-content {
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 30vw;
+  justify-content: center;
 }
 
 .contact-banner {
   max-width: 100%;
   height: auto;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   width: 220px;              
   height: auto;              
-  margin-bottom: 1.5rem; 
 }
 
 .contact-box {
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 12px;
   max-width: 600px;
   width: 100%;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 
 .contact-box h2 {
@@ -69,8 +81,14 @@ button:hover {
   margin-top: 1rem;
   text-align: center;
   font-weight: bold;
-  color: green;
+  color: #333;
 }
+
+.footer-wrapper {
+  width: 100%;
+  margin-top: auto;
+}
+
 
   @media (max-width: 600px) {
     .contact-box {

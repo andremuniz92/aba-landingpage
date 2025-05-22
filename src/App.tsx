@@ -4,6 +4,7 @@ import HomePage from './components/Session1/HomePage/HomePage'
 import About from './components/Session2/About/About'
 import Services from './components/Session3/ABAServices/Services'
 import Contact from './Session4/Contact/Contact'
+import Footer from './Session4/Footer/Footer'
 
 function App() {
 
@@ -23,7 +24,8 @@ function App() {
       </div>
       <div className='colorSessionBlue'>
         <Contact/>
-      </div>       
+      </div>
+      <Footer />
     </>
 
   )

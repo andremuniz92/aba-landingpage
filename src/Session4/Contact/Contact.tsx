@@ -1,6 +1,7 @@
 import './Contact.css';
 import { useState } from 'react';
 import bannerContato from '../../assets/logo-home2.png'
+import Footer from '../Footer/Footer';
 
 function Contact() {
   const [email, setEmail] = useState('');
@@ -29,29 +30,31 @@ function Contact() {
   };
 
   return (
-    <div className="contact-page"  id='Contato'>
-      <img src={bannerContato} alt="Banner Contato" className="contact-banner" />
-      <div className="contact-box">
-        <h2>Entre em contato</h2>
-        <form onSubmit={handleSubmit}>
-          <input
-            type="email"
-            placeholder="Seu e-mail"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-          <textarea
-            placeholder="Sua mensagem"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            required
-          ></textarea>
-          <button type="submit">Enviar</button>
-        </form>
-        {status && <p className="status">{status}</p>}
+      <div className="contact-page"  id='Contato'>
+        <div className="contact-content">
+          <img src={bannerContato} alt="Banner Contato" className="contact-banner" />
+          <div className="contact-box">
+            <h2>Entre em contato</h2>
+            <form onSubmit={handleSubmit}>
+              <input
+                type="email"
+                placeholder="Seu e-mail"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+              <textarea
+                placeholder="Sua mensagem"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                required
+              ></textarea>
+              <button type="submit">Enviar</button>
+            </form>
+            {status && <p className="status">{status}</p>}
+          </div>
+        </div>
       </div>
-    </div>
   );
 }
 

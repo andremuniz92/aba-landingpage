@@ -11,7 +11,6 @@ const handler: Handler = async (event: any) => {
     };
   }
 
-  // Configure o transporte SMTP (exemplo com Gmail)
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -24,7 +23,7 @@ const handler: Handler = async (event: any) => {
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
       to: process.env.EMAIL_USER,
-      subject: `Contato via site de ${email}`,
+      subject: `Contato via site do ABA Solutions do ${email}`,
       text: message,
     });
 
