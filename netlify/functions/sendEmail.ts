@@ -12,7 +12,7 @@ const handler: Handler = async (event: any) => {
   }
 
   const transporter = nodemailer.createTransport({
-    host: 'mail.abasolutions.com.br', // substitua pelo seu host real
+    host: 'smtp.titan.email', // substitua pelo seu host real
     port: 465, // ou 587
     secure: true, // true para 465 (SSL), false para 587 (STARTTLS)
     auth: {
