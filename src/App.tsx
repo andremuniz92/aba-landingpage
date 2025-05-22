@@ -3,8 +3,8 @@ import Header from './components/Session1/Header/Header'
 import HomePage from './components/Session1/HomePage/HomePage'
 import About from './components/Session2/About/About'
 import Services from './components/Session3/ABAServices/Services'
-import Contact from './Session4/Contact/Contact'
-import Footer from './Session4/Footer/Footer'
+import Contact from './components/Session4/Contact/Contact'
+import Footer from './components/Session4/Footer/Footer'
 
 function App() {
 

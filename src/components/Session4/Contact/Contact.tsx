@@ -1,6 +1,6 @@
 import './Contact.css';
 import { useState } from 'react';
-import bannerContato from '../../assets/logo-home2.png'
+import bannerContato from '../../../assets/logo-home2.png'
 
 function Contact() {
   const [email, setEmail] = useState('');

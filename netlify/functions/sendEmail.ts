@@ -12,9 +12,9 @@ const handler: Handler = async (event: any) => {
   }
 
   const transporter = nodemailer.createTransport({
-    host: 'smtp.titan.email', // substitua pelo seu host real
-    port: 465, // ou 587
-    secure: true, // true para 465 (SSL), false para 587 (STARTTLS)
+    host: 'smtp.titan.email',
+    port: 465,
+    secure: true,
     auth: {
       user: process.env.EMAIL_USER,
       pass: process.env.EMAIL_PASS,
