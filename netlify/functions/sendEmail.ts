@@ -30,7 +30,7 @@ const handler: Handler = async (event: any) => {
     console.error('Erro ao enviar email:', error);
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: 'Erro ao enviar o email' }),
+      body: JSON.stringify({ error: 'Erro ao enviar o email: '+ error }),
     };
   }
 };
