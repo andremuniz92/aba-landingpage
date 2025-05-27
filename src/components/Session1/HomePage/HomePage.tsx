@@ -1,24 +1,17 @@
-// import LogoHome from '../Logo/LogoHome';
-// import LogoDiscription from '../LogoDiscription/LogoDiscription';
 import './HomePage.css'
-import logoHome from '../../../assets/logo-home.png'
+import logoHome from '../../../assets/logo-home2.png'
 
 function HomePage () {
     return(
-        // <div className='home'>
-        //     <LogoDiscription/>
-        //     <LogoHome/>
-        // </div>
-
         <div className='home-home'>
             <div className="home-image">
                 <img src={logoHome} alt="Logo ABA Home" />
             </div>
             <div className='home-content'>
                 <div className='home-text'>
-                    <h1 className="home-title">
+                    {/* <h1 className="home-title">
                         ABA                    
-                    </h1>
+                    </h1> */}
                     <div className="discription-home">
                     A ABA Climate Solutions é uma consultoria especializada em sustentabilidade, 
                     com foco em financiamento climático e estratégias ESG. 

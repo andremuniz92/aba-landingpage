@@ -5,8 +5,10 @@ import './Header.css'
 function Header () {
     return(
         <header>
-            <Logo/>
-            <Menu/>
+            <div className="header-inner">
+                <Logo/>
+                <Menu/>
+            </div>
         </header>
         
     );
