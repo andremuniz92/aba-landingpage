@@ -9,7 +9,7 @@ function Creator () {
             </div>
             <div className='creator-content'>
                 <div className='creator-text'>
-                    <h1 className="title">
+                    <h1 className="creator-title">
                         Nossa fundadora                        
                     </h1>
                     <p className="discription-creator">

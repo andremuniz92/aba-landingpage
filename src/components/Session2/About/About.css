@@ -1,7 +1,6 @@
 .about {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
-  height: auto;
   align-items: center;
   justify-content: center;
   padding: 0 2rem;

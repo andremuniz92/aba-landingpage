@@ -32,6 +32,7 @@
   border-radius: 12px;
   max-width: 600px;
   width: 100%;
+  background: linear-gradient(to right, #5c9dfd, #84b6fb);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
 }
