@@ -22,7 +22,6 @@
 .contact-banner {
   max-width: 100%;
   height: auto;
-  margin-bottom: 1rem;
   width: 220px;              
   height: auto;              
 }
@@ -102,7 +101,6 @@ button:hover {
     }
   
     .contact-banner {
-      margin-bottom: 1rem;
       max-width: 80%;
       width: 220px;
     }
