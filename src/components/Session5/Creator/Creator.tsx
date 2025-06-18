@@ -13,27 +13,24 @@ function Creator () {
                         Nossa fundadora                        
                     </h1>
                     <p className="discription-creator">
-                        Beatriz Azevedo é advogada e consultora em sustentabilidade, especializada em ESG e financiamento climático. 
-                        Com uma trajetória acadêmica e profissional sólida, é mestre em Políticas Públicas pela Universidade de Oxford, no Reino Unido,
-                        com bolsa Chevening-Lemann, e possui especialização em Direito Ambiental e Urbanístico pela PUC-Minas.
+                        Beatriz Azevedo é CEO e fundadora da ABA Climate Solutions, 
+                        consultoria com foco em sustentabilidade e financiamento climático.
                         <br/>
                         <br/>
-                        Atualmente, Beatriz é Presidente da Comissão de Direito Ambiental da OAB Ceará e Conselheira Titular do Conselho Estadual do Meio Ambiente (COEMA). 
-                        Além disso, atua como consultora de Financiamento Climático para organizações de grande relevância, como CAGECE, AESBE, Instituto Aya e Club de Madrid.
+                        Advogada, mestre em Políticas Públicas pela Universidade de Oxford (Reino Unido), 
+                        com bolsa Chevening-Lemann, e pós-graduada em Direito Ambiental e Urbanístico pela PUC-Minas,  
+                        Beatriz tem mais de uma década de experiência na área de clima.
                         <br/>
                         <br/>
-                        Com uma forte presença no cenário ambiental, Beatriz tem certificação da Global Reporting Initiative (GRI) e é Multiplicadora B pelo Sistema B. 
-                        Seu portfólio inclui projetos estratégicos com instituições como Esphera, Mota Machado, World Resources Institute – Brasil (WRI Brasil), Cities4Forests, 
-                        Secretaria de Meio Ambiente do Ceará e Instituto de Planejamento de Fortaleza.
+                        Desde 2013, participa ativamente das conferências da ONU sobre mudanças climáticas e, em 2024, 
+                        tornou-se a primeira brasileira reconhecida com o prêmio Land Heroes, 
+                        concedido pela Convenção das Nações Unidas de Combate à Desertificação (UNCCD).
                         <br/>
                         <br/>
-                        Desde 2013, Beatriz participa das conferências de clima da ONU, contribuindo para o debate global sobre sustentabilidade e políticas ambientais. 
-                        Sua trajetória também inclui a cofundação e presidência do Instituto Verdeluz, além da fundação e pesquisa no Grupo de Estudos em Direito 
-                        e Assuntos Internacionais (GEDAI) da Universidade Federal do Ceará.
-                        <br/>
-                        <br/>
-                        Com sua expertise e visão estratégica, Beatriz lidera a ABA Climate Solutions com o propósito de transformar a sustentabilidade 
-                        em uma oportunidade real para empresas e instituições, promovendo impacto positivo e inovação.
+                        Atualmente, preside a Comissão de Direito Ambiental da OAB Ceará e é Conselheira do Conselho Estadual 
+                        do Meio Ambiente do Ceará. Sua atuação combina visão jurídica, técnica e estratégica, com o propósito 
+                        de transformar a sustentabilidade em uma oportunidade real de inovação e impacto positivo, 
+                        especialmente em setores-chave como o saneamento ambiental.
                     </p>
                 </div>
             </div>

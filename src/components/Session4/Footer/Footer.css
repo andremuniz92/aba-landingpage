@@ -70,6 +70,16 @@
     font-size: 1.2rem;
     margin: 0.5rem 0;
   }
+
+  .footer-social a {
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+  }
+
+  .footer-social a:hover {
+  opacity: 0.8;
+  }
   
   .footer-address {
     font-size: 0.9rem;

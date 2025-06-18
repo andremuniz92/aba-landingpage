@@ -1,5 +1,5 @@
 import './About.css'
-import premioAba from '../../../assets/premio-aba.jpg'
+import premioAba from '../../../assets/pagina-sobre-nos.png'
 
 function About () {
     return(

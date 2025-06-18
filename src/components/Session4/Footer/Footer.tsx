@@ -21,10 +21,12 @@ function Footer() {
         <div className="footer-column center-column">
           <img src={logoFooter} alt="Logo" className="footer-logo" />
           <div className="footer-social">
-            <FaInstagram />
-            <FaWhatsapp />
-            <FaFacebook />
-            <FaLinkedinIn />
+            <a href="https://www.instagram.com/abaclimatesolutions/" target="_blank" rel="noopener noreferrer">
+              <FaInstagram />
+            </a>           
+            <a href="https://www.linkedin.com/company/aba-climate-solutions/" target="_blank" rel="noopener noreferrer">
+              <FaLinkedinIn />
+            </a>
           </div>
           <p className="footer-address">
             Fortaleza - Ceará - CE<br />
